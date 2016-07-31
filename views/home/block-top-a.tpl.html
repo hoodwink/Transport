@@ -1,0 +1,33 @@
+<div class="block-top-a wrapper max-width100">			
+	<section id="top-a" class="grid-block">
+		<div class="grid-box width100 grid-h">
+			<div class="module deepest" style="min-height: 399px;">
+
+				<div style="margin: -30px -10px;">  
+					<div class="slider-content">
+						<flex-slider flex-slide="s in mySlides track by $index" animation="fade" control-nav="false" custom-direction-nav=".slider-nav a">
+						    <li class="slide">
+						    	<article class="wk-content clearfix">
+						    		<div ng-class="s.class">  
+	  									<img src="assets/images/teaser_blank.png" alt="Teaser" width="1200" height="459">  
+	  									<div class="caption">
+	  										<h1>{{s.title}}</h1>  
+											<span>{{s.text}}</span>
+										</div>
+									</div>
+								</article>
+						    	<!--
+						        <img ng-src="{{s.img}}">
+						        -->
+						    </li>
+						</flex-slider>
+						<div class="slider-nav">
+							<a class="next"></a>
+							<a class="prev"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
