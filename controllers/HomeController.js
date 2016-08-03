@@ -54,6 +54,16 @@ angular
 	    	}
 	    ];
 
+
+        // Toggle visibility on the success / error messages
+	    if (window.location.href.indexOf('response=success') >= 0) {
+	        $scope.success = true;
+	    }
+
+	    if (window.location.href.indexOf('response=error') >= 0) {
+	        $scope.error = true;
+	    }
+
 	    $timeout(function() {
 	    	$scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
@@ -87,7 +97,4 @@ angular
 		      google.maps.event.trigger(selectedMarker, 'click');
 		    };
 	    }, 500);
-
-	    
-	  
     }]);
