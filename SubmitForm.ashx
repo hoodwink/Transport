@@ -77,7 +77,7 @@ public class SubmitForm : IHttpHandler
     private void SendSMS(Quote quote)
     {
         var message = new MailMessage();
-        message.To.Add(ConfigurationManager.AppSettings["SMSNumber"].ToString() + "@txt.att.net");
+        message.To.Add(ConfigurationManager.AppSettings["SMSNumber"].ToString());
         message.From = new MailAddress(ConfigurationManager.AppSettings["FromEmailAddress"].ToString());
         message.Subject = "A quote has been requested";
         message.IsBodyHtml = false;
