@@ -27,9 +27,9 @@ public partial class ViewQuotes : System.Web.UI.Page
                 connection.Close();
             }
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
-           
+            lblError.Text = ex.Message.ToString();
         }
     }
 }

@@ -33,6 +33,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
         <div>
             <h1>Submitted Quotes</h1>
             <asp:Repeater ID="rptQuotes" runat="server">

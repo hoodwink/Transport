@@ -7,21 +7,21 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Transport(1)", ".", "{B4FCA
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_9015"
-		Debug.AspNetCompiler.PhysicalPath = "..\Transport\"
+		Debug.AspNetCompiler.PhysicalPath = "..\code\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9015\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_9015"
-		Release.AspNetCompiler.PhysicalPath = "..\Transport\"
+		Release.AspNetCompiler.PhysicalPath = "..\code\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9015\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "9015"
-		SlnRelativePath = "..\Transport\"
+		SlnRelativePath = "..\code\"
 	EndProjectSection
 EndProject
 Global
