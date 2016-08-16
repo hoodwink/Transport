@@ -5,6 +5,7 @@ using System.Web;
 using System.Net.Mail;
 using System.Configuration;
 using System.Data.Odbc;
+using System.Diagnostics;
 
 public class SubmitForm : IHttpHandler
 {
@@ -26,7 +27,7 @@ public class SubmitForm : IHttpHandler
             quote.Notes = context.Request["q7_additionalInfo"].Trim();
 
             // Persist form fields to database
-            //this.SaveForm(quote);
+            this.SaveForm(quote);
 
             // Send SMS message
             this.SendSMS(quote);
@@ -34,7 +35,7 @@ public class SubmitForm : IHttpHandler
             // Send email message
             this.SendEmail(quote);
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             context.Response.Redirect("/?response=error");
         }
@@ -78,14 +79,13 @@ public class SubmitForm : IHttpHandler
     {
         var message = new MailMessage();
         message.To.Add(ConfigurationManager.AppSettings["SMSNumber"].ToString());
-        //message.From = new MailAddress(ConfigurationManager.AppSettings["FromEmailAddress"].ToString());
         try
         {
             message.From = new MailAddress(quote.Email);
         }
         catch
         {
-            message.From = new MailAddress("no-reply@slautotransport.com");
+            message.From = new MailAddress("no-reply@transport.com");
         }
         message.Subject = "A quote has been requested";
         message.IsBodyHtml = false;
@@ -102,7 +102,6 @@ public class SubmitForm : IHttpHandler
     {
         var message = new MailMessage();
         message.To.Add(ConfigurationManager.AppSettings["ToEmailAddress"].ToString());
-        //message.From = new MailAddress(ConfigurationManager.AppSettings["FromEmailAddress"].ToString());    
         try
         {
             message.From = new MailAddress(quote.Email);
